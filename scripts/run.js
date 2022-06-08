@@ -19,12 +19,12 @@ const main = async () => {
   await waveTxn.wait();
 
   waveCount = await waveContract.getTotalWaves();
-    
-    
-  waveCount = await waveContract.getTotalTodayWaves();
+
+  const utcStr = new Date().toUTCString();
+  console.log(utcStr);
+  
 };
 
-let today = new Date().toLocaleDateString()
 
 const runMain = async () => {
   try {

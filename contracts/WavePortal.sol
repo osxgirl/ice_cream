@@ -10,20 +10,16 @@ contract WavePortal {
     constructor() {
         console.log("Yo yo, I am a contract and I am smart");
     }
-
+    
     function wave() public {
         totalWaves += 1;
         console.log("%s has waved!", msg.sender);
     }
-
+    
     function getTotalWaves() public view returns (uint256) {
         console.log("We have %d total waves!", totalWaves);
         return totalWaves;
     }
-    
-    function getTotalTodayWaves() public view returns (uint256) {
-        console.log("We have %o new waves today!", totalWaves);
-        return totalWaves;
-    }
+
 }
 
